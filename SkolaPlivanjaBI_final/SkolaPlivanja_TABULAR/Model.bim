@@ -1,0 +1,1152 @@
+<Alter AllowCreate="true" ObjectExpansion="ExpandFull" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <Object>
+    <DatabaseID>SemanticModel</DatabaseID>
+  </Object>
+  <ObjectDefinition>
+    <Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500">
+      <ID>SemanticModel</ID>
+      <Name>SemanticModel</Name>
+      <Annotations>
+        <Annotation>
+          <Name>SandboxVersion</Name>
+          <Value>SQL11_Denali</Value>
+        </Annotation>
+      </Annotations>
+      <ddl200:CompatibilityLevel>1100</ddl200:CompatibilityLevel>
+      <ddl200_200:StorageEngineUsed>InMemory</ddl200_200:StorageEngineUsed>
+      <Language>5146</Language>
+      <DataSourceImpersonationInfo>
+        <ImpersonationMode>Default</ImpersonationMode>
+      </DataSourceImpersonationInfo>
+      <Dimensions>
+        <Dimension>
+          <ID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</ID>
+          <Name>Query</Name>
+          <Annotations>
+            <Annotation>
+              <Name>IsQueryEditorUsed</Name>
+              <Value>True</Value>
+            </Annotation>
+            <Annotation>
+              <Name>QueryEditorSerialization</Name>
+              <Value>&lt;?xml version="1.0" encoding="UTF-16"?&gt;&lt;Gemini xmlns="QueryEditorSerialization"&gt;&lt;AnnotationContent&gt;&lt;![CDATA[&lt;RSQueryCommandText&gt;select u.PlivacID,
+p.Ime+' '+p.Prezime as 'ImePrezimePlivaca',
+g.Naziv as 'Grad',
+u.DatumUplate,
+gr.Naziv as 'NazivGrupe',
+vt.Cijena,
+vt.Naziv as 'NazivTreninga',
+t.Ime + ' ' + t.Prezime as 'ImePrezimeTrenera'
+from dbo.Uplata as u join dbo.VrstaTreninga as vt
+on u.VrstaTreningaID=vt.VrstaTreningaID join dbo.Plivaci as p 
+on p.PlivacID=u.PlivacID join dbo.Treneri as t 
+on t.TrenerID=u.TrenerID join dbo.Grad as g
+on g.GradID=p.GradID join dbo.Grupe as gr on gr.GrupaID=p.GrupaID&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Text&lt;/RSQueryCommandType&gt;&lt;RSQueryDesignState&gt;&lt;/RSQueryDesignState&gt;]]&gt;&lt;/AnnotationContent&gt;&lt;/Gemini&gt;</Value>
+            </Annotation>
+            <Annotation>
+              <Name>TableWidgetSerialization</Name>
+            </Annotation>
+            <Annotation>
+              <Name>DataMarketWebBaseUrl</Name>
+            </Annotation>
+            <Annotation>
+              <Name>DataMarketWebQueryUrl</Name>
+            </Annotation>
+          </Annotations>
+          <Source xsi:type="DataSourceViewBinding">
+            <DataSourceViewID>Sandbox</DataSourceViewID>
+          </Source>
+          <UnknownMember valuens="ddl200_200">AutomaticNull</UnknownMember>
+          <ErrorConfiguration>
+            <KeyNotFound>IgnoreError</KeyNotFound>
+            <KeyDuplicate>ReportAndStop</KeyDuplicate>
+            <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+          </ErrorConfiguration>
+          <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+          <Language>5146</Language>
+          <UnknownMemberName>Unknown</UnknownMemberName>
+          <Attributes>
+            <Attribute>
+              <ID>__XL_RowNumber</ID>
+              <Name>__XL_RowNumber</Name>
+              <Type valuens="ddl200_200">RowNumber</Type>
+              <Usage>Key</Usage>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <DataSize>4</DataSize>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ddl200_200:RowNumberBinding" />
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>4</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <Source xsi:type="ddl200_200:RowNumberBinding" />
+              </NameColumn>
+              <AttributeRelationships>
+                <AttributeRelationship>
+                  <AttributeID>PlivacID</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>PlivacID</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>ImePrezimePlivaca</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>ImePrezimePlivaca</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Grad</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Grad</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>DatumUplate</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>DatumUplate</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>NazivGrupe</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>NazivGrupe</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Cijena</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Cijena</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>NazivTreninga</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>NazivTreninga</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>ImePrezimeTrenera</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>ImePrezimeTrenera</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Calculated Column 1</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Izdvajanje</Name>
+                </AttributeRelationship>
+              </AttributeRelationships>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>PlivacID</ID>
+              <Name>PlivacID</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>BigInt</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                    <ColumnID>PlivacID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                  <ColumnID>PlivacID</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>ImePrezimePlivaca</ID>
+              <Name>ImePrezimePlivaca</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32766</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                    <ColumnID>ImePrezimePlivaca</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32766</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                  <ColumnID>ImePrezimePlivaca</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Grad</ID>
+              <Name>Grad</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32766</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                    <ColumnID>Grad</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32766</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                  <ColumnID>Grad</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="DateTimeGeneral" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>DatumUplate</ID>
+              <Name>DatumUplate</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Date</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                    <ColumnID>DatumUplate</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                  <ColumnID>DatumUplate</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <ddl300_300:FormatString>General Date</ddl300_300:FormatString>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>NazivGrupe</ID>
+              <Name>NazivGrupe</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32766</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                    <ColumnID>NazivGrupe</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32766</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                  <ColumnID>NazivGrupe</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Cijena</ID>
+              <Name>Cijena</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                    <ColumnID>Cijena</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                  <ColumnID>Cijena</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>NazivTreninga</ID>
+              <Name>NazivTreninga</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32766</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                    <ColumnID>NazivTreninga</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32766</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                  <ColumnID>NazivTreninga</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>ImePrezimeTrenera</ID>
+              <Name>ImePrezimeTrenera</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32766</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                    <ColumnID>ImePrezimeTrenera</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32766</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                  <ColumnID>ImePrezimeTrenera</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Calculated Column 1</ID>
+              <Name>Izdvajanje</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Empty</DataType>
+                  <Source xsi:type="ddl200_200:ExpressionBinding">
+                    <Expression>[Cijena]*0.1</Expression>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <Source xsi:type="ddl200_200:ExpressionBinding">
+                  <Expression>[Cijena]*0.1</Expression>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+          </Attributes>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" />
+          </ProactiveCaching>
+        </Dimension>
+      </Dimensions>
+      <Cubes>
+        <Cube>
+          <ID>Model</ID>
+          <Name>Model</Name>
+          <Annotations>
+            <Annotation>
+              <Name>DefaultMeasure</Name>
+              <Value>__No measures defined</Value>
+            </Annotation>
+          </Annotations>
+          <Language>5146</Language>
+          <Dimensions>
+            <Dimension>
+              <ID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</ID>
+              <Name>Query</Name>
+              <DimensionID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</DimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>__XL_RowNumber</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>PlivacID</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>ImePrezimePlivaca</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Grad</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>DatumUplate</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>NazivGrupe</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cijena</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>NazivTreninga</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>ImePrezimeTrenera</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Calculated Column 1</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <MeasureGroups>
+            <MeasureGroup>
+              <ID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</ID>
+              <Name>Query</Name>
+              <Measures>
+                <Measure>
+                  <ID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</ID>
+                  <Name>__XL_Count Query</Name>
+                  <AggregateFunction>Count</AggregateFunction>
+                  <DataType>BigInt</DataType>
+                  <Source>
+                    <DataType>BigInt</DataType>
+                    <DataSize>8</DataSize>
+                    <Source xsi:type="RowBinding">
+                      <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                    </Source>
+                  </Source>
+                  <Visible>false</Visible>
+                </Measure>
+              </Measures>
+              <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+              <ErrorConfiguration>
+                <KeyNotFound>IgnoreError</KeyNotFound>
+                <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+              </ErrorConfiguration>
+              <ProcessingMode>Regular</ProcessingMode>
+              <Dimensions>
+                <Dimension xsi:type="DegenerateMeasureGroupDimension">
+                  <CubeDimensionID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>__XL_RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Query</TableID>
+                            <ColumnID>__XL_RowNumber</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PlivacID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>BigInt</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                            <ColumnID>PlivacID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ImePrezimePlivaca</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32766</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                            <ColumnID>ImePrezimePlivaca</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Grad</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32766</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                            <ColumnID>Grad</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DatumUplate</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Date</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                            <ColumnID>DatumUplate</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>NazivGrupe</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32766</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                            <ColumnID>NazivGrupe</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Cijena</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Double</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                            <ColumnID>Cijena</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>NazivTreninga</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32766</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                            <ColumnID>NazivTreninga</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ImePrezimeTrenera</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32766</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</TableID>
+                            <ColumnID>ImePrezimeTrenera</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Calculated Column 1</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Empty</DataType>
+                          <Source xsi:type="ddl200_200:ExpressionBinding">
+                            <Expression></Expression>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <ddl200_200:ShareDimensionStorage>Shared</ddl200_200:ShareDimensionStorage>
+                </Dimension>
+              </Dimensions>
+              <Partitions>
+                <Partition>
+                  <ID>Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4</ID>
+                  <Name>Query</Name>
+                  <Annotations>
+                    <Annotation>
+                      <Name>IsQueryEditorUsed</Name>
+                      <Value>True</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>QueryEditorSerialization</Name>
+                      <Value>&lt;?xml version="1.0" encoding="UTF-16"?&gt;&lt;Gemini xmlns="QueryEditorSerialization"&gt;&lt;AnnotationContent&gt;&lt;![CDATA[&lt;RSQueryCommandText&gt;select u.PlivacID,
+p.Ime+' '+p.Prezime as 'ImePrezimePlivaca',
+g.Naziv as 'Grad',
+u.DatumUplate,
+gr.Naziv as 'NazivGrupe',
+vt.Cijena,
+vt.Naziv as 'NazivTreninga',
+t.Ime + ' ' + t.Prezime as 'ImePrezimeTrenera'
+from dbo.Uplata as u join dbo.VrstaTreninga as vt
+on u.VrstaTreningaID=vt.VrstaTreningaID join dbo.Plivaci as p 
+on p.PlivacID=u.PlivacID join dbo.Treneri as t 
+on t.TrenerID=u.TrenerID join dbo.Grad as g
+on g.GradID=p.GradID join dbo.Grupe as gr on gr.GrupaID=p.GrupaID&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Text&lt;/RSQueryCommandType&gt;&lt;RSQueryDesignState&gt;&lt;/RSQueryDesignState&gt;]]&gt;&lt;/AnnotationContent&gt;&lt;/Gemini&gt;</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>TableWidgetSerialization</Name>
+                    </Annotation>
+                  </Annotations>
+                  <Source xsi:type="QueryBinding">
+                    <DataSourceID>bddeab47-ffe5-49ea-a7ad-b0e8cecde065</DataSourceID>
+                    <QueryDefinition>select u.PlivacID,
+p.Ime+' '+p.Prezime as 'ImePrezimePlivaca',
+g.Naziv as 'Grad',
+u.DatumUplate,
+gr.Naziv as 'NazivGrupe',
+vt.Cijena,
+vt.Naziv as 'NazivTreninga',
+t.Ime + ' ' + t.Prezime as 'ImePrezimeTrenera'
+from dbo.Uplata as u join dbo.VrstaTreninga as vt
+on u.VrstaTreningaID=vt.VrstaTreningaID join dbo.Plivaci as p 
+on p.PlivacID=u.PlivacID join dbo.Treneri as t 
+on t.TrenerID=u.TrenerID join dbo.Grad as g
+on g.GradID=p.GradID join dbo.Grupe as gr on gr.GrupaID=p.GrupaID</QueryDefinition>
+                  </Source>
+                  <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+                  <ProcessingMode>Regular</ProcessingMode>
+                  <ErrorConfiguration>
+                    <KeyNotFound>IgnoreError</KeyNotFound>
+                    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+                  </ErrorConfiguration>
+                  <ProactiveCaching>
+                    <SilenceInterval>-PT1S</SilenceInterval>
+                    <Latency>-PT1S</Latency>
+                    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                    <Source xsi:type="ProactiveCachingInheritedBinding" />
+                  </ProactiveCaching>
+                </Partition>
+              </Partitions>
+              <ProactiveCaching>
+                <SilenceInterval>-PT1S</SilenceInterval>
+                <Latency>-PT1S</Latency>
+                <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                <Source xsi:type="ProactiveCachingInheritedBinding" />
+              </ProactiveCaching>
+            </MeasureGroup>
+          </MeasureGroups>
+          <Source>
+            <DataSourceViewID>Sandbox</DataSourceViewID>
+          </Source>
+          <MdxScripts>
+            <MdxScript>
+              <ID>MdxScript</ID>
+              <Name>MdxScript</Name>
+              <Commands>
+                <Command>
+                  <Text>CALCULATE; 
+CREATE MEMBER CURRENTCUBE.Measures.[__No measures defined] AS 1, VISIBLE = 0; 
+ALTER CUBE CURRENTCUBE UPDATE DIMENSION Measures, Default_Member = [__No measures defined]; </Text>
+                </Command>
+                <Command>
+                  <Text>----------------------------------------------------------
+-- PowerPivot measures command (do not modify manually) --
+----------------------------------------------------------
+
+
+CREATE MEASURE 'Query'[UkupnoUplate]=SUM([Cijena]);
+CREATE MEASURE 'Query'[UkupnoIzdvajanje]=SUM([Izdvajanje]);
+CREATE MEMBER CURRENTCUBE.Measures.[_UkupnoIzdvajanje Goal] AS 'Measures.[UkupnoUplate]', ASSOCIATED_MEASURE_GROUP = 'Query';
+CREATE MEMBER CURRENTCUBE.Measures.[_UkupnoIzdvajanje Status] AS 'Case When IsEmpty(KpiValue("UkupnoIzdvajanje")) Then Null When KpiValue("UkupnoIzdvajanje") * 100 / KpiGoal("UkupnoIzdvajanje") &lt; 15 Then -1 When KpiValue("UkupnoIzdvajanje") * 100 / KpiGoal("UkupnoIzdvajanje") &gt;= 15 And KpiValue("UkupnoIzdvajanje") * 100 / KpiGoal("UkupnoIzdvajanje") &lt; 40 Then 0 Else 1 End', ASSOCIATED_MEASURE_GROUP = 'Query';
+CREATE MEMBER CURRENTCUBE.Measures.[_UkupnoIzdvajanje Trend] AS '0', ASSOCIATED_MEASURE_GROUP = 'Query';
+CREATE KPI CURRENTCUBE.[UkupnoIzdvajanje] AS Measures.[UkupnoIzdvajanje], ASSOCIATED_MEASURE_GROUP = 'Query', GOAL = Measures.[_UkupnoIzdvajanje Goal], STATUS = Measures.[_UkupnoIzdvajanje Status], TREND = Measures.[_UkupnoIzdvajanje Trend], STATUS_GRAPHIC = 'Three Circles Colored', TREND_GRAPHIC = 'Three Circles Colored';
+CREATE MEASURE 'Query'[BrojUplata]=COUNTA([PlivacID]);
+</Text>
+                </Command>
+              </Commands>
+              <CalculationProperties>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[UkupnoUplate]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>Kpi</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>GoalType</Name>
+                      <Value>Measure</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiStatusType</Name>
+                      <Value>Linear</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiThresholdType</Name>
+                      <Value>Percentage</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiThresholdOrdering</Name>
+                      <Value>Ascending</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiThresholdCount</Name>
+                      <Value>2</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiThreshold_0</Name>
+                      <Value>15</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiThreshold_1</Name>
+                      <Value>40</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>ValueDescription</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>GoalDescription</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>StatusDescription</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>TrendDescription</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>GoalMeasure</Name>
+                      <Value>UkupnoUplate</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>GoalMeasureTableName</Name>
+                      <Value>Query</Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[UkupnoIzdvajanje]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>SupportMdx</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectType</Name>
+                      <Value>Measure</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectName</Name>
+                      <Value>UkupnoIzdvajanje</Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>Measures.[_UkupnoIzdvajanje Goal]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <Visible>false</Visible>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>SupportMdx</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectType</Name>
+                      <Value>Measure</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectName</Name>
+                      <Value>UkupnoIzdvajanje</Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>Measures.[_UkupnoIzdvajanje Status]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <Visible>false</Visible>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>SupportMdx</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectType</Name>
+                      <Value>Measure</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectName</Name>
+                      <Value>UkupnoIzdvajanje</Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>Measures.[_UkupnoIzdvajanje Trend]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <Visible>false</Visible>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>SupportKpi</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectType</Name>
+                      <Value>Measure</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectName</Name>
+                      <Value>UkupnoIzdvajanje</Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>KPIs.[UkupnoIzdvajanje]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[BrojUplata]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <CalculationReference>Measures.[__No measures defined]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <Visible>false</Visible>
+                </CalculationProperty>
+              </CalculationProperties>
+            </MdxScript>
+          </MdxScripts>
+          <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" />
+          </ProactiveCaching>
+        </Cube>
+      </Cubes>
+      <DataSources>
+        <DataSource xsi:type="RelationalDataSource">
+          <ID>6d361f7e-0e58-4c9f-84ca-e12d6d535a2a</ID>
+          <Name>SqlServer localhost SkolaPlivanjaBI_final</Name>
+          <Annotations>
+            <Annotation>
+              <Name>ConnectionEditUISource</Name>
+              <Value>SqlServer</Value>
+            </Annotation>
+          </Annotations>
+          <ConnectionString>Provider=SQLNCLI11;Data Source=.;User ID=Seada;Persist Security Info=false;Integrated Security=SSPI;Initial Catalog=SkolaPlivanjaBI_final</ConnectionString>
+          <ImpersonationInfo>
+            <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
+            <Account>Seada</Account>
+          </ImpersonationInfo>
+          <Timeout>PT0S</Timeout>
+        </DataSource>
+        <DataSource xsi:type="RelationalDataSource">
+          <ID>bb07a432-50b0-4fb4-b30d-d7e0a38ef627</ID>
+          <Name>SqlServer localhost SkolaPlivanjaBI_final 2</Name>
+          <Annotations>
+            <Annotation>
+              <Name>ConnectionEditUISource</Name>
+              <Value>SqlServer</Value>
+            </Annotation>
+          </Annotations>
+          <ConnectionString>Provider=SQLNCLI11;Data Source=.;Initial Catalog=SkolaPlivanjaBI_final;Integrated Security=SSPI;Persist Security Info=false</ConnectionString>
+          <ImpersonationInfo>
+            <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
+            <Account>Seada</Account>
+          </ImpersonationInfo>
+          <Timeout>PT0S</Timeout>
+        </DataSource>
+        <DataSource xsi:type="RelationalDataSource">
+          <ID>e993c6e2-62e9-4b87-9168-159e0c12654a</ID>
+          <Name>SqlServer localhost SkolaPlivanjaBI_final 3</Name>
+          <Annotations>
+            <Annotation>
+              <Name>ConnectionEditUISource</Name>
+              <Value>SqlServer</Value>
+            </Annotation>
+          </Annotations>
+          <ConnectionString>Provider=SQLNCLI11;Data Source=.;Initial Catalog=SkolaPlivanjaBI_final;Integrated Security=SSPI;Persist Security Info=false</ConnectionString>
+          <ImpersonationInfo>
+            <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
+            <Account>Seada</Account>
+          </ImpersonationInfo>
+          <Timeout>PT0S</Timeout>
+        </DataSource>
+        <DataSource xsi:type="RelationalDataSource">
+          <ID>9a13cf1a-d6b9-401e-80b3-aafd67c8d310</ID>
+          <Name>SqlServer localhost SkolaPlivanjaBI_final 4</Name>
+          <Annotations>
+            <Annotation>
+              <Name>ConnectionEditUISource</Name>
+              <Value>SqlServer</Value>
+            </Annotation>
+          </Annotations>
+          <ConnectionString>Provider=SQLNCLI11;Data Source=.;Integrated Security=SSPI;Persist Security Info=false;Initial Catalog=SkolaPlivanjaBI_final</ConnectionString>
+          <ImpersonationInfo>
+            <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
+            <Account>Seada</Account>
+          </ImpersonationInfo>
+          <Timeout>PT0S</Timeout>
+        </DataSource>
+        <DataSource xsi:type="RelationalDataSource">
+          <ID>b7d988ce-4a23-4f49-bf47-427e07c018be</ID>
+          <Name>SqlServer localhost SkolaPlivanjaBI_final 5</Name>
+          <Annotations>
+            <Annotation>
+              <Name>ConnectionEditUISource</Name>
+              <Value>SqlServer</Value>
+            </Annotation>
+          </Annotations>
+          <ConnectionString>Provider=SQLNCLI11;Data Source=.;Initial Catalog=SkolaPlivanjaBI_final;Integrated Security=SSPI;Persist Security Info=false</ConnectionString>
+          <ImpersonationInfo>
+            <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
+            <Account>Seada</Account>
+          </ImpersonationInfo>
+          <Timeout>PT0S</Timeout>
+        </DataSource>
+        <DataSource xsi:type="RelationalDataSource">
+          <ID>bddeab47-ffe5-49ea-a7ad-b0e8cecde065</ID>
+          <Name>SqlServer localhost SkolaPlivanjaBI_final 6</Name>
+          <Annotations>
+            <Annotation>
+              <Name>ConnectionEditUISource</Name>
+              <Value>SqlServer</Value>
+            </Annotation>
+          </Annotations>
+          <ConnectionString>Provider=SQLNCLI11;Data Source=.;Integrated Security=SSPI;Persist Security Info=false;Initial Catalog=SkolaPlivanjaBI_final</ConnectionString>
+          <ImpersonationInfo>
+            <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
+            <Account>Seada</Account>
+          </ImpersonationInfo>
+          <Timeout>PT0S</Timeout>
+        </DataSource>
+      </DataSources>
+      <DataSourceViews>
+        <DataSourceView>
+          <ID>Sandbox</ID>
+          <Name>Sandbox</Name>
+          <DataSourceID>6d361f7e-0e58-4c9f-84ca-e12d6d535a2a</DataSourceID>
+          <Schema>
+            <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+              <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:Locale="bs-Latn-BA">
+                <xs:complexType>
+                  <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Query_85e52a07-f5d6-4b27-8e5a-0092261abbb4" msdata:Locale="" msprop:DataSourceID="bddeab47-ffe5-49ea-a7ad-b0e8cecde065" msprop:IsLogical="True" msprop:FriendlyName="Query" msprop:DbTableName="Query" msprop:TableType="View" msprop:Description="Query" msprop:QueryDefinition="select u.PlivacID,&#xD;&#xA;p.Ime+' '+p.Prezime as 'ImePrezimePlivaca',&#xD;&#xA;g.Naziv as 'Grad',&#xD;&#xA;u.DatumUplate,&#xD;&#xA;gr.Naziv as 'NazivGrupe',&#xD;&#xA;vt.Cijena,&#xD;&#xA;vt.Naziv as 'NazivTreninga',&#xD;&#xA;t.Ime + ' ' + t.Prezime as 'ImePrezimeTrenera'&#xD;&#xA;from dbo.Uplata as u join dbo.VrstaTreninga as vt&#xD;&#xA;on u.VrstaTreningaID=vt.VrstaTreningaID join dbo.Plivaci as p &#xD;&#xA;on p.PlivacID=u.PlivacID join dbo.Treneri as t &#xD;&#xA;on t.TrenerID=u.TrenerID join dbo.Grad as g&#xD;&#xA;on g.GradID=p.GradID join dbo.Grupe as gr on gr.GrupaID=p.GrupaID">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PlivacID" msprop:DbColumnName="PlivacID" msprop:FriendlyName="PlivacID" type="xs:int" minOccurs="0" />
+                          <xs:element name="ImePrezimePlivaca" msprop:DbColumnName="ImePrezimePlivaca" msprop:FriendlyName="ImePrezimePlivaca" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32766" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="Grad" msprop:DbColumnName="Grad" msprop:FriendlyName="Grad" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32766" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="DatumUplate" msprop:DbColumnName="DatumUplate" msprop:FriendlyName="DatumUplate" type="xs:dateTime" minOccurs="0" />
+                          <xs:element name="NazivGrupe" msprop:DbColumnName="NazivGrupe" msprop:FriendlyName="NazivGrupe" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32766" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="Cijena" msprop:DbColumnName="Cijena" msprop:FriendlyName="Cijena" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="NazivTreninga" msprop:DbColumnName="NazivTreninga" msprop:FriendlyName="NazivTreninga" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32766" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="ImePrezimeTrenera" msprop:DbColumnName="ImePrezimeTrenera" msprop:FriendlyName="ImePrezimeTrenera" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32766" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+            </xs:schema>
+            <NewDataSet xmlns="" />
+          </Schema>
+        </DataSourceView>
+      </DataSourceViews>
+    </Database>
+  </ObjectDefinition>
+</Alter>

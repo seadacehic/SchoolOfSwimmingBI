@@ -1,0 +1,110 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>SkolaPlivanjaBI_OLAP</Database>
+    <Server>localhost\SEADAOLAP</Server>
+    <ConnectionString>Data Source=localhost\SEADAOLAP;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>PkvhQkoW5DCjhQ9zPHWruOAMyxc=25.01.2019. 20:57:2325.01.2019. 20:57:23</TimeStamp>
+        <ID>
+          <String>Skola PlivanjaBI_DW_DS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>hSoCkATIDm7W2XtdCedi0k6W4DE=25.01.2019. 20:58:0125.01.2019. 20:57:59</TimeStamp>
+        <ID>
+          <String>Skola Plivanja BI DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>a56OOzGaXXo9oXxvZrvBicA5RuE=25.01.2019. 21:10:0325.01.2019. 21:00:21</TimeStamp>
+        <ID>
+          <String>Dim Datum</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>6CRR9ot+f7QvtZYcEHR+pY2+B1s=25.01.2019. 21:11:0325.01.2019. 21:00:21</TimeStamp>
+        <ID>
+          <String>Dim Plivac</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>OAalWaeAViJ0M8i3Fo7il0KbmqM=25.01.2019. 21:11:1325.01.2019. 21:00:21</TimeStamp>
+        <ID>
+          <String>Dim Trener</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>I+UrLFJ4zgQGqzFYr/6hsG+98xU=25.01.2019. 21:11:2025.01.2019. 21:00:21</TimeStamp>
+        <ID>
+          <String>Dim Bazen</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>U/OXuxcj9p5IWHOvFnsC4v9snCI=25.01.2019. 21:16:2925.01.2019. 21:00:21</TimeStamp>
+        <ID>
+          <String>Dim Lokacija</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>cQ2iYMtlTRcjveWPKbO4kXdayyM=25.01.2019. 21:16:4225.01.2019. 21:00:21</TimeStamp>
+        <ID>
+          <String>Dim Zabiljeska</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>9y1AF8kwF/GpV7W9p1zzE7zSgqQ=25.01.2019. 21:16:5125.01.2019. 21:00:21</TimeStamp>
+        <ID>
+          <String>Dim Akademsko Zvanje</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>rbQ14hiudcsod90BF5XJxnjRix8=25.01.2019. 21:25:1425.01.2019. 21:00:21</TimeStamp>
+        <ID>
+          <String>Fact Treninzi</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>27u/XCSLf/iK5eq/cAOMRbPHcN0=25.01.2019. 21:25:1425.01.2019. 21:00:20b78OFLIE7iXfopNl9Vdypg0Zqyg=25.01.2019. 21:00:2225.01.2019. 21:00:20</TimeStamp>
+        <ID>
+          <String>Skola Plivanja BI DW</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>euUS40O0zSDOw1Dtc8dy2IRdfTo=25.01.2019. 20:52:3025.01.2019. 20:52:27</TimeStamp>
+      <ID>
+        <String>SkolaPlivanjaBI_OLAP</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2019-01-25T20:25:24.613333Z</LastDeployed>
+</DeploymentSnapshot>

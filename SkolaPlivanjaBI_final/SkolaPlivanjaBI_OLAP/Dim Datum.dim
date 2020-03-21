@@ -1,0 +1,349 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="623a4c45-8139-4f9c-b153-6c32a1014b76" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Datum</ID>
+  <Name>Dim Datum</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1443" scrolltop="-2672" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5927" y="8493" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimDatum" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000b80b00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimDatum" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1443</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-2672</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="61" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="85">
+            <Shape Id="Datum ID" Expanded="false">
+              <Attributes>
+                <Attribute Id="Datum ID" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Dan" Expanded="false">
+              <Attributes>
+                <Attribute Id="Dan" />
+              </Attributes>
+              <Position x="131" y="20" />
+            </Shape>
+            <Shape Id="Mjesec" Expanded="false">
+              <Attributes>
+                <Attribute Id="Mjesec" />
+              </Attributes>
+              <Position x="242" y="20" />
+            </Shape>
+            <Shape Id="Kvartal" Expanded="false">
+              <Attributes>
+                <Attribute Id="Kvartal" />
+              </Attributes>
+              <Position x="353" y="20" />
+            </Shape>
+            <Shape Id="Godina" Expanded="false">
+              <Attributes>
+                <Attribute Id="Godina" />
+              </Attributes>
+              <Position x="465" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="5c533f3d-fd37-4b8e-9ed3-e26d60f560ae">
+    <DataSourceViewID>Skola Plivanja BI DW</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="1f7a5674-e3e0-4aec-8869-208f825f14fe">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="cf538dae-d99c-4df1-a3b0-0d8c066a748c">
+      <ID>Datum ID</ID>
+      <Name>Datum ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d88982b2-65ba-4e07-85a0-9e9ad50fe9f6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="74403ff1-48f5-44b7-9d73-ccc2a90072fe">
+            <TableID>dbo_DimDatum</TableID>
+            <ColumnID>DatumID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="40829168-9447-4c0b-9f36-aca13afb6ef3">
+          <AttributeID>Dan</AttributeID>
+          <Name>Dan</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="eced5c8c-fc76-4b4b-96ee-c38e45f2b75f">
+      <ID>Dan</ID>
+      <Name>Dan</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aa106181-507c-4fb9-b033-331a3d74e079">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bf9392a2-d016-4720-896a-d4242a627b63">
+            <TableID>dbo_DimDatum</TableID>
+            <ColumnID>Dan</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="6378559e-e12c-4950-9fca-fdd72fedd301">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2ce2d39f-99f6-4733-bae5-eb8929b09bb7">
+            <TableID>dbo_DimDatum</TableID>
+            <ColumnID>Mjesec</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="70d769b8-7ae1-45e0-bb41-9f3ef43921ed">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cb7769bc-4d9c-4235-a3bf-e061c207fd13">
+            <TableID>dbo_DimDatum</TableID>
+            <ColumnID>Godina</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="e79ef4c5-e1cb-4285-bec7-692c1c5bd474">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5de313a0-8ef7-4221-a5c5-3323256ff091">
+            <TableID>dbo_DimDatum</TableID>
+            <ColumnID>Kvartal</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="930a9601-5afd-4d85-9f86-9e8b5fd80809">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d438e1b3-c041-4a26-b4a0-6d58934d5782">
+          <TableID>dbo_DimDatum</TableID>
+          <ColumnID>Dan</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="a1e5225f-4b9f-4993-bcec-6f5d9e41ff2e">
+          <AttributeID>Mjesec</AttributeID>
+          <Name>Mjesec</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ValueColumn dwd:design-time-name="4acacb30-5dc5-48e1-8be5-8c995e3552bb">
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="37cb612a-df58-46f8-b613-5af363bda6d5">
+          <TableID>dbo_DimDatum</TableID>
+          <ColumnID>Dan</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1911efc7-349e-496a-898b-7ba6e73dc2e2">
+      <ID>Mjesec</ID>
+      <Name>Mjesec</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2051d3c2-bda9-4467-9e68-8bc09d229c49">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3bd4fb4-645c-4653-a863-93e953ee9a76">
+            <TableID>dbo_DimDatum</TableID>
+            <ColumnID>Mjesec</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="eb81008f-ff86-4a92-b9a5-4bd31e7be183">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cc005c46-30bd-4531-9b99-e3bcc53af165">
+            <TableID>dbo_DimDatum</TableID>
+            <ColumnID>Godina</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="f9536416-b38a-45c0-9724-d8237ca4043e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="26a37d1b-054c-4aae-b236-3c7429c2f872">
+            <TableID>dbo_DimDatum</TableID>
+            <ColumnID>Kvartal</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="dae37517-fee7-47e3-9523-3ef547603dbb">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="07855db5-d1e9-4069-8dc8-af5515232c03">
+          <TableID>dbo_DimDatum</TableID>
+          <ColumnID>Mjesec</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="52270e15-13f4-497c-afe0-cc802828d62e">
+          <AttributeID>Kvartal</AttributeID>
+          <Name>Kvartal</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ValueColumn dwd:design-time-name="a3553f54-faf7-4d7d-bde2-0b22c6f65ada">
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0819d582-56fb-461f-ab79-52d1732eac84">
+          <TableID>dbo_DimDatum</TableID>
+          <ColumnID>Mjesec</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b360b225-6610-4aea-b825-1130de342bf9">
+      <ID>Godina</ID>
+      <Name>Godina</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bb8d8ee3-73c9-41ea-8732-26501afba3e9">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ed01fac0-228b-4fc8-8322-75f28cfebf24">
+            <TableID>dbo_DimDatum</TableID>
+            <ColumnID>Godina</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="34225a38-b665-43c9-b78a-e2b215dfd353">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="3ad1f7d9-951f-4a64-a02b-c35b0548a790">
+          <TableID>dbo_DimDatum</TableID>
+          <ColumnID>Godina</ColumnID>
+        </Source>
+      </NameColumn>
+      <ValueColumn dwd:design-time-name="1102725f-dab2-445e-841a-e09b3a0da23d">
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a7bb13b0-2224-47ea-8789-46f06e82f57f">
+          <TableID>dbo_DimDatum</TableID>
+          <ColumnID>Godina</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6b08fa1f-a7a9-43ad-9b48-ab5dad5808a1">
+      <ID>Kvartal</ID>
+      <Name>Kvartal</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c3aeb8e7-7717-488c-8a19-927f40aa34d1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b76a8ffb-c559-4707-ab39-9bee4d7a4256">
+            <TableID>dbo_DimDatum</TableID>
+            <ColumnID>Kvartal</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="ad5cc8ea-8a2d-4d28-b9f9-2d9169b1f418">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="267f076f-3070-4ebe-89c1-934dc23953dc">
+            <TableID>dbo_DimDatum</TableID>
+            <ColumnID>Godina</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="11136a8a-1ea1-4139-b994-f445dceecb2f">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="36b74ace-af6b-4bed-af8d-31627708fe4a">
+          <TableID>dbo_DimDatum</TableID>
+          <ColumnID>Kvartal</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ec60c1dd-77ce-42a5-a6d7-70f4839d247b">
+          <AttributeID>Godina</AttributeID>
+          <Name>Godina</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ValueColumn dwd:design-time-name="d4adecf2-d0b8-4f1e-8b82-adb66fa852d7">
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="adbc5716-b8c2-48b2-acf0-a30f772a576e">
+          <TableID>dbo_DimDatum</TableID>
+          <ColumnID>Kvartal</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="436abe8c-6b2d-4296-a2ea-b93fc78d4cfb">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="bff17b88-266f-4647-9c4b-7563868f70f0">
+          <ID>Godina</ID>
+          <Name>Godina</Name>
+          <SourceAttributeID>Godina</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="fa871aa9-30fe-48d3-80f1-aaebfaa5d939">
+          <ID>Kvartal</ID>
+          <Name>Kvartal</Name>
+          <SourceAttributeID>Kvartal</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="130ffcda-a7d2-4b83-b1b0-0a2bb818307f">
+          <ID>Mjesec</ID>
+          <Name>Mjesec</Name>
+          <SourceAttributeID>Mjesec</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="aa054b03-9ff2-4f38-ae9e-68be61794e8d">
+          <ID>Dan</ID>
+          <Name>Dan</Name>
+          <SourceAttributeID>Dan</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

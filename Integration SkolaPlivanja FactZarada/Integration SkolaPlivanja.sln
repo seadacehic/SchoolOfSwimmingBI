@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Integration SkolaPlivanja", "Integration SkolaPlivanja\Integration SkolaPlivanja.dtproj", "{BB0AD3BF-D56B-4320-A820-5701FD49A4F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB0AD3BF-D56B-4320-A820-5701FD49A4F9}.Development|Default.ActiveCfg = Development
+		{BB0AD3BF-D56B-4320-A820-5701FD49A4F9}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {307BF595-7965-46CE-B81F-A986BEA775CD}
+	EndGlobalSection
+EndGlobal

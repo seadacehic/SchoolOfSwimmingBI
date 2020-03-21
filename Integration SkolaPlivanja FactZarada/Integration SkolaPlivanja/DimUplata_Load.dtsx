@@ -1,0 +1,481 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/24/2019 9:25:42 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-GJME0IA"
+  DTS:CreatorName="DESKTOP-GJME0IA\Seada"
+  DTS:DTSID="{4719EAB6-5C99-4DF5-8008-7AD72A47C4D3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.0900.40"
+  DTS:LocaleID="5146"
+  DTS:ObjectName="DimUplata_Load"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{57140757-62FD-48C8-A425-64D3C77FD747}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\punjenje DimUplate"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A17FD5C4-9044-4DA5-892E-7C974F1587B1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="punjenje DimUplate"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\punjenje DimUplate\DimUplata"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DimUplata"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimUplata]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\punjenje DimUplate\DimUplata.Connections[OleDbConnection]"
+                  connectionManagerID="{D6753604-8F31-4AD3-BC21-37614A8508F9}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(local).SkolaPlivanjaBI_DW_final]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].Columns[Naziv]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Naziv"
+                      externalMetadataColumnId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].ExternalColumns[NazivTreninga]"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Naziv]" />
+                    <inputColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].Columns[UplataID]"
+                      cachedDataType="i4"
+                      cachedName="UplataID"
+                      externalMetadataColumnId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].ExternalColumns[UplataAltKey]"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[UplataID]" />
+                    <inputColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].Columns[MjesecUplate]"
+                      cachedDataType="i4"
+                      cachedName="MjesecUplate"
+                      externalMetadataColumnId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].ExternalColumns[MjesecUplate]"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[MjesecUplate]" />
+                    <inputColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].Columns[GodinaUplate]"
+                      cachedDataType="i4"
+                      cachedName="GodinaUplate"
+                      externalMetadataColumnId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].ExternalColumns[GodinaUplate]"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[GodinaUplate]" />
+                    <inputColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].Columns[Cijena]"
+                      cachedDataType="numeric"
+                      cachedName="Cijena"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].ExternalColumns[Cijena]"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cijena]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].ExternalColumns[UplataKey]"
+                      dataType="i4"
+                      name="UplataKey" />
+                    <externalMetadataColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].ExternalColumns[UplataAltKey]"
+                      dataType="i4"
+                      name="UplataAltKey" />
+                    <externalMetadataColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].ExternalColumns[NazivTreninga]"
+                      dataType="wstr"
+                      length="50"
+                      name="NazivTreninga" />
+                    <externalMetadataColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].ExternalColumns[Cijena]"
+                      dataType="numeric"
+                      name="Cijena"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].ExternalColumns[MjesecUplate]"
+                      dataType="dbDate"
+                      name="MjesecUplate" />
+                    <externalMetadataColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input].ExternalColumns[GodinaUplate]"
+                      dataType="dbDate"
+                      name="GodinaUplate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\punjenje DimUplate\DimUplata.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\punjenje DimUplate\DimUplata.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\DimUplata.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\punjenje DimUplate\DimUplata.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\punjenje DimUplate\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT U.UplataID,
+DATEPART(MONTH,U.DatumUplate) AS MjesecUplate,
+DATEPART(YEAR,U.DatumUplate) AS GodinaUplate,
+VT.Naziv,
+VT.Cijena 
+FROM dbo.Uplata as U join dbo.VrstaTreninga as VT
+on U.VrstaTreningaID = VT.VrstaTreningaID</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\punjenje DimUplate\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="{56FFC890-DAB1-489D-83FC-A8F7A6B3E4AF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(local).SkolaPlivanjaBI_final]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[UplataID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UplataID]"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[UplataID]"
+                      name="UplataID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[MjesecUplate]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MjesecUplate]"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[MjesecUplate]"
+                      name="MjesecUplate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[GodinaUplate]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GodinaUplate]"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[GodinaUplate]"
+                      name="GodinaUplate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Naziv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Naziv]"
+                      length="50"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Naziv]"
+                      name="Naziv"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cijena]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cijena]"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cijena]"
+                      name="Cijena"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UplataID]"
+                      dataType="i4"
+                      name="UplataID" />
+                    <externalMetadataColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MjesecUplate]"
+                      dataType="i4"
+                      name="MjesecUplate" />
+                    <externalMetadataColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GodinaUplate]"
+                      dataType="i4"
+                      name="GodinaUplate" />
+                    <externalMetadataColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Naziv]"
+                      dataType="wstr"
+                      length="50"
+                      name="Naziv" />
+                    <externalMetadataColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cijena]"
+                      dataType="numeric"
+                      name="Cijena"
+                      precision="18"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UplataID]"
+                      dataType="i4"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UplataID]"
+                      name="UplataID" />
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MjesecUplate]"
+                      dataType="i4"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MjesecUplate]"
+                      name="MjesecUplate" />
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GodinaUplate]"
+                      dataType="i4"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GodinaUplate]"
+                      name="GodinaUplate" />
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Naziv]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Naziv]"
+                      name="Naziv" />
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cijena]"
+                      dataType="numeric"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cijena]"
+                      name="Cijena"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\punjenje DimUplate.Paths[OLE DB Source Output]"
+              endId="Package\punjenje DimUplate\DimUplata.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\punjenje DimUplate\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="172,42"
+          Id="Package\punjenje DimUplate"
+          TopLeft="197,82" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\punjenje DimUplate">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="128,42"
+          Id="Package\punjenje DimUplate\DimUplata"
+          TopLeft="207,149" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\punjenje DimUplate\OLE DB Source"
+          TopLeft="201,42" />
+        <EdgeLayout
+          Id="Package\punjenje DimUplate.Paths[OLE DB Source Output]"
+          TopLeft="273.5,84">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65"
+              Start="0,0"
+              End="0,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\punjenje DimUplate\DimUplata">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\punjenje DimUplate\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
